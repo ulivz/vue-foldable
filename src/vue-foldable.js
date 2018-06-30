@@ -1,17 +1,59 @@
+const DEFAULT_VISUAL_HEIGHT = 100;
+
 export default {
   name: 'vue-foldable',
 
   props: {
     initialHeight: {
-      type: Number,
-      default: 0,
+      type: [Number, String],
+      default: DEFAULT_VISUAL_HEIGHT,
+    }
+  },
+
+  data() {
+    return {
+      collapsed: true,
+      currentMaxHeight: this.initialHeight,
+      threshold: this.initialHeight,
+      percentageMode: this.initialHeight.indexOf('%') !== -1
+    }
+  },
+
+  created() {
+    if (typeof this.initialHeight === 'string' && !this.percentageMode) {
+      this.currentMaxHeight = this.threshold = DEFAULT_VISUAL_HEIGHT
+    }
+  },
+
+  mounted() {
+    if (this.percentageMode) {
+      const threshold = parseInt(this.threshold.replace('%', '').trim())
+      console.log(threshold)
+      console.log(this.$refs.container.scrollHeight)
+      this.currentMaxHeight = this.threshold = this.$refs.container.scrollHeight * threshold / 100
+    }
+  },
+
+  methods: {
+    toggle() {
+      this.collapsed = !this.collapsed
+      if (this.collapsed) {
+        this.currentMaxHeight = this.threshold
+      } else {
+        // explicitly set max height so that it can be transitioned
+        this.currentMaxHeight = this.$refs.container.scrollHeight
+      }
+    },
+
+    setMaxHeight(maxHeight = maxHeight) {
+      this.currentMaxHeight = maxHeight
     }
   },
 
   render(h) {
     return h('div', { class: ['vue-foldable'] }, [
       h('div', {
-        style: { maxHeight: this.maxHeight + 'px' },
+        style: { maxHeight: this.currentMaxHeight + 'px' },
         class: ['vue-foldable-container'],
         ref: 'container'
       }, this.$slots.default),
@@ -22,27 +64,4 @@ export default {
       ])
     ])
   },
-
-  data() {
-    return {
-      collapsed: true,
-      maxHeight: this.initialHeight,
-    }
-  },
-
-  methods: {
-    toggle() {
-      this.collapsed = !this.collapsed
-      if (this.collapsed) {
-        this.maxHeight = this.initialHeight
-      } else {
-        // explicitly set max height so that it can be transitioned
-        this.maxHeight = this.$refs.container.scrollHeight
-      }
-    },
-
-    setMaxHeight(maxHeight = maxHeight) {
-      this.maxHeight = maxHeight
-    }
-  }
 }
