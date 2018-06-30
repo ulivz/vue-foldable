@@ -1,0 +1,18 @@
+$transition-duration = .3s
+.vue-foldable
+  .vue-foldable-container
+    transition max-height $transition-duration
+    overflow hidden
+  .foldable-view-more
+    position relative
+    text-align center
+    top -30px
+    height 50px
+    color $green
+    .view-more-mask
+      transition opacity $transition-duration
+      opacity 0
+      height 30px
+      background linear-gradient(to bottom, rgba(55, 55, 55, 0), white)
+      &.show-mask
+        opacity 1
