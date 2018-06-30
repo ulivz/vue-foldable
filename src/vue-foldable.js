@@ -4,33 +4,48 @@ export default {
   name: 'vue-foldable',
 
   props: {
-    initialHeight: {
+    minHeight: {
+      type: Number,
+      default: DEFAULT_VISUAL_HEIGHT,
+    },
+    height: {
       type: [Number, String],
       default: DEFAULT_VISUAL_HEIGHT,
     }
   },
 
   data() {
+    let height = this.height
+    if (typeof this.height === 'number' && this.height < this.minHeight) {
+      height = this.minHeight
+    }
     return {
       collapsed: true,
-      currentMaxHeight: this.initialHeight,
-      threshold: this.initialHeight,
-      percentageMode: this.initialHeight.indexOf('%') !== -1
+      currentMaxHeight: height,
+      threshold: height,
+      reachThreshold: true,
+      percentageMode: this.height.indexOf('%') !== -1
     }
   },
 
   created() {
-    if (typeof this.initialHeight === 'string' && !this.percentageMode) {
+    if (typeof this.height === 'string' && !this.percentageMode) {
       this.currentMaxHeight = this.threshold = DEFAULT_VISUAL_HEIGHT
     }
   },
 
   mounted() {
+    const maxHeight = this.$refs.container.scrollHeight
     if (this.percentageMode) {
       const threshold = parseInt(this.threshold.replace('%', '').trim())
-      console.log(threshold)
-      console.log(this.$refs.container.scrollHeight)
-      this.currentMaxHeight = this.threshold = this.$refs.container.scrollHeight * threshold / 100
+      let calculatedHeight = this.$refs.container.scrollHeight * threshold / 100
+      if (calculatedHeight < this.minHeight) {
+        calculatedHeight = this.minHeight
+      }
+      this.currentMaxHeight = this.threshold = calculatedHeight
+    }
+    if (maxHeight < this.threshold) {
+      this.reachThreshold = false
     }
   },
 
@@ -58,10 +73,12 @@ export default {
         ref: 'container'
       }, this.$slots.default),
 
-      h('div', { class: ['foldable-view-more'], on: { click: this.toggle } }, [
+      this.reachThreshold
+        ? h('div', { class: ['foldable-view-more'], on: { click: this.toggle } }, [
         h('div', { class: { 'view-more-mask': true, 'show-mask': this.collapsed } }),
         h('div', { class: ['view-more-text'] }, [this.collapsed ? 'View more' : 'Collapse']),
       ])
+        : ''
     ])
   },
 }
