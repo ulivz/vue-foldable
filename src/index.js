@@ -1,4 +1,4 @@
-import './vue-foldable.styl'
-import VueFoldable from './vue-foldable.vue'
+import './VueFoldable.styl'
+import VueFoldable from './VueFoldable.vue'
 
 export default VueFoldable

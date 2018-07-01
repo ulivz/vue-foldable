@@ -9,16 +9,16 @@ sidebar: auto
 ```
 <foldable height="%20" once>
 
-<<< @/src/vue-foldable.js
+<<< @/src/vue-foldable.vue
 
 </foldable>
 ```
 
 - Output:
 
-<foldable class="demo" height="%20" once>
+<foldable class="demo" height="%20">
 
-<<< @/src/vue-foldable.js
+<<< @/src/vue-foldable.vue
 
 </foldable>
 

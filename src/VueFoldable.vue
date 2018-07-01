@@ -10,17 +10,23 @@
            @click="toggle"
            v-if="reachThreshold">
         <div class="view-more-mask" :class="{ 'show-mask': this.collapsed }"></div>
-        <div class="view-more-text">{{ collapsed ? 'View more' : 'Collapse' }}</div>
+        <div class="view-more-text">
+          <ArrowIcon class="view-more-icon"
+                :class="{ 'collapsed': this.collapsed }"></ArrowIcon>
+          {{ collapsed ? 'View more' : 'Collapse' }}</div>
       </div>
     </slot>
   </div>
 </template>
 
 <script>
+  import ArrowIcon from './ArrowIcon.vue'
   const DEFAULT_VISUAL_HEIGHT = 100;
 
   export default {
     name: 'vue-foldable',
+
+    components: { ArrowIcon },
 
     props: {
       minHeight: {
@@ -84,10 +90,6 @@
             this.reachThreshold = false
           }
         }
-      },
-
-      setMaxHeight(maxHeight = maxHeight) {
-        this.currentMaxHeight = maxHeight
       }
     }
   }
