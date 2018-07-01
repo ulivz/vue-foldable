@@ -11,6 +11,10 @@ export default {
     height: {
       type: [Number, String],
       default: DEFAULT_VISUAL_HEIGHT,
+    },
+    once: {
+      type: Boolean,
+      default: false,
     }
   },
 
@@ -57,6 +61,10 @@ export default {
       } else {
         // explicitly set max height so that it can be transitioned
         this.currentMaxHeight = this.$refs.container.scrollHeight
+        console.log(this.once)
+        if (this.once) {
+          this.reachThreshold = false
+        }
       }
     },
 
@@ -78,7 +86,7 @@ export default {
         h('div', { class: { 'view-more-mask': true, 'show-mask': this.collapsed } }),
         h('div', { class: ['view-more-text'] }, [this.collapsed ? 'View more' : 'Collapse']),
       ])
-        : ''
+        : null
     ])
   },
 }
