@@ -53,9 +53,18 @@ When you use percentage, the calculated height based on the dynamic elements may
 
 By default, when you expand the content, you can also fold it again. You can make the expansion operation running only once via setting this option to `true`.
 
+### async
+
+- Type: `boolean`
+- Default: `false`
+
+`vue-foldable` will try to inspect whether the content's height meet the threshold for the display of `view more` at `mounted` hook, but sometimes, if content contains [replaced element](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element), e.g. `<img>`, the height of content will be possible to change. 
+
+In this case, you can set `async` to `true` and `vue-foldable` will watch the content height change and re-initialize when the height changes. 
+
 ## Transition
 
-By default, vue-foldable don't have any transition preset, you can add transition via CSS:
+By default, vue-foldable don't have any transition preset, you can customize transition via CSS:
 
 ``` css
 .vue-foldable-container {
@@ -67,6 +76,9 @@ By default, vue-foldable don't have any transition preset, you can add transitio
 }
 ```
 
+## TODO
+
+- Lazy load
 
 ## License
 
