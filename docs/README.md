@@ -7,7 +7,7 @@ sidebar: auto
 - Input:
 
 ```
-<foldable initial-height="%20">
+<foldable height="%20" once>
 
 <<< @/src/vue-foldable.js
 
