@@ -1,23 +1,16 @@
-
 # vue-foldable
 
 [![NPM version](https://img.shields.io/npm/v/vue-foldable.svg?style=flat)](https://npmjs.com/package/vue-foldable) [![NPM downloads](https://img.shields.io/npm/dm/vue-foldable.svg?style=flat)](https://npmjs.com/package/vue-foldable) [![CircleCI](https://circleci.com/gh/ULIVZ/vue-foldable/tree/master.svg?style=shield)](https://circleci.com/gh/ULIVZ/vue-foldable/tree/master)  [![codecov](https://codecov.io/gh/ULIVZ/vue-foldable/branch/master/graph/badge.svg)](https://codecov.io/gh/ULIVZ/vue-foldable)
  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/ULIVZ/donate)
 
-## Install
+## Features
 
-```bash
-yarn add vue-foldable
-```
+- Support explicit or Percentage [height](http://www.v2js.com/vue-foldable/#height)
+- Infinite & [once](http://www.v2js.com/vue-foldable/#once-mode) mode
+- Optional expanding [transition](http://www.v2js.com/vue-foldable/#transition)
+- [Asynchronous content](http://www.v2js.com/vue-foldable/#asynchronous-content) watching
 
-## Usage
-
-```js
-const vueFoldable = require('vue-foldable')
-
-vueFoldable()
-//=> foo
-```
+Check out the full [documentation](http://www.v2js.com/vue-foldable).
 
 ## Contributing
 
