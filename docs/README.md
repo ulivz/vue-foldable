@@ -39,16 +39,6 @@ Vue.component('foldable', VueFoldable)
   <vue-intro/>
 </foldable>
 
-<style>
-  .transition-demo .vue-foldable-container {
-    transition: max-height 0.3s
-  }
-  
-  .transition-demo .view-more-mask {
-    transition: opacity .3s;
-  }
-</style> 
-
 ### Once mode
 
 <foldable class="once-demo" height="%50" once>
