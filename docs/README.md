@@ -4,29 +4,66 @@ sidebar: auto
 
 ## Getting Started
 
+### Install
+
+``` bash
+yarn add vue-foldable -S
+# or
+npm install vue-foldable -S
+```
+
+### Usage
+
+``` js
+import VueFoldable from 'vue-foldable'
+Vue.component('foldable', VueFoldable)
+```
+
+``` vue
+<foldable>
+  <!-- Your content -->
+</foldable>
+```
+
+## Showcase
+
 ### Infinite mode
 
-<foldable class="demo" height="100">
+<foldable class="infinite-demo" height="100">
   <vue-intro/>
 </foldable>
 
+### Transition
+
+<foldable class="transition-demo" height="100">
+  <vue-intro/>
+</foldable>
+
+<style>
+  .transition-demo .vue-foldable-container {
+    transition: max-height 0.3s
+  }
+  
+  .transition-demo .view-more-mask {
+    transition: opacity .3s;
+  }
+</style> 
+
 ### Once mode
 
-<foldable class="demo" height="%50" once>
+<foldable class="once-demo" height="%50" once>
   <vue-intro/>
 </foldable>
 
 ### Asynchronous content
 
-<foldable class="demo" height="%50" async>
+<foldable class="async-demo" height="%50" async>
 
 <p align="center">
   <img src="https://vuejs.org/images/logo.png"/>
 </p>
 
 </foldable>
-
-
 
 ## Props
 
@@ -77,10 +114,6 @@ By default, vue-foldable don't have any transition preset, you can customize tra
   transition: opacity .3s;
 }
 ```
-
-## TODO
-
-- Lazy load
 
 ## License
 
