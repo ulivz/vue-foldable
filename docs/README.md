@@ -29,17 +29,54 @@ Vue.component('foldable', VueFoldable)
 
 ### Infinite mode
 
+<br>
+<details>
+<summary><b>Source</b></summary>
+
+``` vue
+<foldable class="infinite-demo" height="100">
+  <vue-intro/>
+</foldable>
+```
+
+</details>
+
 <foldable class="infinite-demo" height="100">
   <vue-intro/>
 </foldable>
 
 ### Transition
 
+<br>
+<details>
+<summary><b>Source</b></summary>
+
+``` vue
+<foldable class="transition-demo" height="100">
+  <vue-intro/>
+</foldable>
+```
+
+</details>
+
 <foldable class="transition-demo" height="100">
   <vue-intro/>
 </foldable>
 
+
 ### Once mode
+
+<br>
+<details>
+<summary><b>Source</b></summary>
+
+``` vue
+<foldable class="once-demo" height="%50" once>
+  <vue-intro/>
+</foldable>
+```
+
+</details>
 
 <foldable class="once-demo" height="%50" once>
   <vue-intro/>
@@ -47,12 +84,25 @@ Vue.component('foldable', VueFoldable)
 
 ### Asynchronous content
 
+<br>
+<details>
+<summary><b>Source</b></summary>
+
+``` vue
+
 <foldable class="async-demo" height="%50" async>
+  <p align="center">
+    <img src="https://vuejs.org/images/logo.png"/>
+  </p>
+</foldable>
+```
 
-<p align="center">
-  <img src="https://vuejs.org/images/logo.png"/>
-</p>
+</details>
 
+<foldable class="async-demo" height="%50" async>
+  <p align="center">
+    <img src="https://vuejs.org/images/logo.png"/>
+  </p>
 </foldable>
 
 ## Props
