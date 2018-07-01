@@ -61,7 +61,6 @@ export default {
       } else {
         // explicitly set max height so that it can be transitioned
         this.currentMaxHeight = this.$refs.container.scrollHeight
-        console.log(this.once)
         if (this.once) {
           this.reachThreshold = false
         }

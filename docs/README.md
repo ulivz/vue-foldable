@@ -16,7 +16,7 @@ sidebar: auto
 
 - Output:
 
-<foldable height="%20" once>
+<foldable class="demo" height="%20" once>
 
 <<< @/src/vue-foldable.js
 
@@ -49,6 +49,17 @@ When you use percentage, the calculated height based on the dynamic elements may
 - Default: `false`
 
 By default, when you expand the content, you can also fold it again. You can make the expansion operation running only once via setting this option to `true`.
+
+## Transition
+
+By default, vue-foldable don't have any transition preset, you can add transition via CSS:
+
+``` css
+.vue-foldable-container {
+  transition: max-height 0.3s
+}
+```
+
 
 ## License
 
