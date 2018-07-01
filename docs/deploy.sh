@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 set -e
-yarn build
+yarn docs:build
 
 cd docs/.vuepress/dist
 
