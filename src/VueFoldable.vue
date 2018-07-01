@@ -98,17 +98,18 @@
 
     methods: {
       handleMount() {
-        this.calculateThreshold()
-        this.checkReachThresfold()
+        const contentHeight = this.$refs.container.scrollHeight
+        this.calculateThreshold(contentHeight)
+        this.checkReachThresfold(contentHeight)
       },
 
-      checkReachThresfold () {
-        this.reachThreshold = this.$refs.container.scrollHeight > this.threshold
+      checkReachThresfold (contentHeight) {
+        this.reachThreshold = contentHeight > this.threshold
       },
 
-      calculateThreshold() {
+      calculateThreshold(contentHeight) {
         if (this.percentageMode) {
-          let calculatedHeight = this.$refs.container.scrollHeight * this.percentage
+          let calculatedHeight = contentHeight * this.percentage
           if (calculatedHeight < this.minHeight) {
             calculatedHeight = this.minHeight
           }
@@ -147,8 +148,6 @@
       count++
       newHeight = el.scrollHeight
       if (oldHeight !== newHeight) {
-        console.log(oldHeight)
-        console.log(newHeight)
         callback(newHeight)
         if (poller) {
           clearTimeout(poller)
@@ -157,8 +156,6 @@
       oldHeight = newHeight
       if (count <= maxCount) {
         poller = setTimeout(unit, interval)
-      } else {
-        console.warn('Finished')
       }
     }
 
