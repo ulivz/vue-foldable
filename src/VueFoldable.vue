@@ -53,7 +53,7 @@
       }
     },
 
-    data() {
+    data () {
       let height = this.height
       if (typeof this.height === 'number' && this.height < this.minHeight) {
         height = this.minHeight
@@ -68,7 +68,7 @@
       }
     },
 
-    created() {
+    created () {
       if (typeof this.height === 'string' && !this.percentageMode) {
         this.currentMaxHeight = this.threshold = DEFAULT_VISUAL_HEIGHT
       }
@@ -77,8 +77,16 @@
       }
     },
 
-    mounted() {
+    mounted () {
       this.handleMount()
+
+      // Temporary hack since this.$nextTick still cannot ensure all the sub components rendered.
+      // See: https://vuejs.org/v2/api/#mounted
+      setTimeout(this.handleMount, 50)
+      // this.$nextTick(function () {
+      //     this.handleMount()
+      // })
+
       if (this.async) {
         onElementHeightChange({
           el: this.$refs.container,
@@ -104,11 +112,12 @@
           if (calculatedHeight < this.minHeight) {
             calculatedHeight = this.minHeight
           }
-          this.currentMaxHeight = this.threshold = calculatedHeight
+          this.currentMaxHeight = calculatedHeight
+          this.threshold = calculatedHeight
         }
       },
 
-      toggle() {
+      toggle () {
         this.collapsed = !this.collapsed
         if (this.collapsed) {
           this.currentMaxHeight = this.threshold

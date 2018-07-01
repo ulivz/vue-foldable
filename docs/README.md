@@ -6,17 +6,19 @@ sidebar: auto
 
 ### Infinite mode
 
-<foldable class="demo" height="%50" async>
-
-<p align="center">
-  <img src="https://vuejs.org/images/logo.png"/>
-</p>
-
+<foldable class="demo" height="100">
+  <vue-intro/>
 </foldable>
 
 ### Once mode
 
-<foldable class="demo" height="%50" async once>
+<foldable class="demo" height="%50" once>
+  <vue-intro/>
+</foldable>
+
+### Asynchronous content
+
+<foldable class="demo" height="%50" async>
 
 <p align="center">
   <img src="https://vuejs.org/images/logo.png"/>
