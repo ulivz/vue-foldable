@@ -41,7 +41,15 @@
       },
       once: {
         type: Boolean,
-        default: false,
+        default: false
+      },
+      async: {
+        type: Boolean,
+        default: false
+      },
+      timeout: {
+        type: Number,
+        default: 3000
       }
     },
 
@@ -55,7 +63,8 @@
         currentMaxHeight: height,
         threshold: height,
         reachThreshold: true,
-        percentageMode: this.height.indexOf('%') !== -1
+        percentageMode: this.height.indexOf('%') !== -1,
+        percentage: null
       }
     },
 
@@ -63,24 +72,42 @@
       if (typeof this.height === 'string' && !this.percentageMode) {
         this.currentMaxHeight = this.threshold = DEFAULT_VISUAL_HEIGHT
       }
+      if (this.percentageMode) {
+        this.percentage = parseInt(this.threshold.replace('%', '').trim()) / 100
+      }
     },
 
     mounted() {
-      const maxHeight = this.$refs.container.scrollHeight
-      if (this.percentageMode) {
-        const threshold = parseInt(this.threshold.replace('%', '').trim())
-        let calculatedHeight = this.$refs.container.scrollHeight * threshold / 100
-        if (calculatedHeight < this.minHeight) {
-          calculatedHeight = this.minHeight
-        }
-        this.currentMaxHeight = this.threshold = calculatedHeight
-      }
-      if (maxHeight < this.threshold) {
-        this.reachThreshold = false
+      this.handleMount()
+      if (this.async) {
+        onElementHeightChange({
+          el: this.$refs.container,
+          callback: this.handleMount,
+          timeout: this.timeout
+        })
       }
     },
 
     methods: {
+      handleMount() {
+        this.calculateThreshold()
+        this.checkReachThresfold()
+      },
+
+      checkReachThresfold () {
+        this.reachThreshold = this.$refs.container.scrollHeight > this.threshold
+      },
+
+      calculateThreshold() {
+        if (this.percentageMode) {
+          let calculatedHeight = this.$refs.container.scrollHeight * this.percentage
+          if (calculatedHeight < this.minHeight) {
+            calculatedHeight = this.minHeight
+          }
+          this.currentMaxHeight = this.threshold = calculatedHeight
+        }
+      },
+
       toggle() {
         this.collapsed = !this.collapsed
         if (this.collapsed) {
@@ -96,4 +123,36 @@
     }
   }
 
+  function onElementHeightChange ({
+    el,
+    callback,
+    timeout
+  }) {
+    let oldHeight = el.scrollHeight, newHeight
+    let poller
+    let interval = 100
+    let count = 0
+    let maxCount = timeout / interval
+
+    function unit () {
+      count++
+      newHeight = el.scrollHeight
+      if (oldHeight !== newHeight) {
+        console.log(oldHeight)
+        console.log(newHeight)
+        callback(newHeight)
+        if (poller) {
+          clearTimeout(poller)
+        }
+      }
+      oldHeight = newHeight
+      if (count <= maxCount) {
+        poller = setTimeout(unit, interval)
+      } else {
+        console.warn('Finished')
+      }
+    }
+
+    unit()
+  }
 </script>

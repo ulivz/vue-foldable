@@ -4,23 +4,26 @@ sidebar: auto
 
 ## Getting Started
 
-- Input:
+### Infinite mode
 
-```
-<foldable height="%20" once>
+<foldable class="demo" height="%50" async>
 
-<<< @/src/vue-foldable.vue
-
-</foldable>
-```
-
-- Output:
-
-<foldable class="demo" height="%20">
-
-<<< @/src/vue-foldable.vue
+<p align="center">
+  <img src="https://vuejs.org/images/logo.png"/>
+</p>
 
 </foldable>
+
+### Once mode
+
+<foldable class="demo" height="%50" async once>
+
+<p align="center">
+  <img src="https://vuejs.org/images/logo.png"/>
+</p>
+
+</foldable>
+
 
 
 ## Props
@@ -57,6 +60,10 @@ By default, vue-foldable don't have any transition preset, you can add transitio
 ``` css
 .vue-foldable-container {
   transition: max-height 0.3s
+}
+
+.view-more-mask {
+  transition: opacity .3s;
 }
 ```
 
