@@ -12,8 +12,10 @@
         <div class="view-more-mask" :class="{ 'show-mask': this.collapsed }"></div>
         <div class="view-more-text">
           <ArrowIcon class="view-more-icon"
-                :class="{ 'collapsed': this.collapsed }"></ArrowIcon>
-          {{ collapsed ? 'View more' : 'Collapse' }}</div>
+                     :class="{ 'collapsed': this.collapsed }">
+          </ArrowIcon>
+          {{ collapsed ? 'View more' : 'Collapse' }}
+        </div>
       </div>
     </slot>
   </div>
