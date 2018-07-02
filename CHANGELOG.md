@@ -1,3 +1,13 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/ULIVZ/vue-foldable/compare/v0.1.0...v0.1.1) (2018-07-02)
+
+
+### Bug Fixes
+
+* unexpected error whrn height isn't given ([07029e7](https://github.com/ULIVZ/vue-foldable/commit/07029e7))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2018-07-01)
 
