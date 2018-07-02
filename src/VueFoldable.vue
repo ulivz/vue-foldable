@@ -63,7 +63,7 @@
         currentMaxHeight: height,
         threshold: height,
         reachThreshold: true,
-        percentageMode: this.height.indexOf('%') !== -1,
+        percentageMode: typeof this.height === 'string' && this.height.indexOf('%') !== -1,
         percentage: null
       }
     },
