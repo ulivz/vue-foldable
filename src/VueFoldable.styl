@@ -1,22 +1,32 @@
 .vue-foldable
+  position relative
+  padding-bottom 30px
+
   .vue-foldable-container
     overflow hidden
-  .foldable-view-more
-    position relative
-    top -80px
+
+  .vue-foldable-view-more
+    position absolute
+    bottom 0
+    width 100%
     text-align center
-    height 50px
+    height 30px
+    line-height 30px
     cursor pointer
-    .view-more-mask
-      opacity 0
+    color #4dba87
+    &.collapsed
+      .vue-foldable-mask
+        background linear-gradient(to bottom, rgba(55, 55, 55, 0), white)
+      .vue-foldable-icon
+        transform scaleY(-1)
+
+    .vue-foldable-mask
+      position absolute
+      top -80px
       height 80px
-      background linear-gradient(to bottom, rgba(55, 55, 55, 0), white)
-      &.show-mask
-        opacity 1
-    .view-more-text
-      color #4dba87
-    .view-more-icon
+      width 100%
+      background transparent
+
+    .vue-foldable-icon
       width 18px
       transform scaleY(1)
-      &.collapsed
-        transform scaleY(-1)
