@@ -1,3 +1,13 @@
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/ULIVZ/vue-foldable/compare/v0.2.0...v0.2.1) (2018-07-03)
+
+
+### Bug Fixes
+
+* cannot select text under foldable mask ([84aebf1](https://github.com/ULIVZ/vue-foldable/commit/84aebf1))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/ULIVZ/vue-foldable/compare/v0.1.1...v0.2.0) (2018-07-02)
 
