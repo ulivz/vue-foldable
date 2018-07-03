@@ -16,9 +16,13 @@
     color #4dba87
     &.collapsed
       .vue-foldable-mask
+        opacity 1
         background linear-gradient(to bottom, rgba(55, 55, 55, 0), white)
       .vue-foldable-icon
         transform scaleY(-1)
+    &:not(.collapsed)
+      .vue-foldable-mask
+        opacity 0
 
     .vue-foldable-mask
       position absolute
@@ -26,6 +30,7 @@
       height 80px
       width 100%
       background transparent
+      pointer-events none
 
     .vue-foldable-icon
       width 18px
