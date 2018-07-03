@@ -40,6 +40,7 @@ Vue.component('foldable', VueFoldable)
 ```
 
 </details>
+<br>
 
 <foldable class="infinite-demo" height="100">
   <vue-intro/>
@@ -56,6 +57,7 @@ Vue.component('foldable', VueFoldable)
   <vue-intro/>
 </foldable>
 ```
+<br>
 
 </details>
 
@@ -77,6 +79,7 @@ Vue.component('foldable', VueFoldable)
 ```
 
 </details>
+<br>
 
 <foldable class="once-demo" height="%50" once>
   <vue-intro/>
@@ -89,8 +92,7 @@ Vue.component('foldable', VueFoldable)
 <summary><b>Source</b></summary>
 
 ``` vue
-
-<foldable class="async-demo" height="%50" async>
+<foldable class="async-demo transition-demo" height="%50" async>
   <p align="center">
     <img src="https://vuejs.org/images/logo.png"/>
   </p>
@@ -98,8 +100,9 @@ Vue.component('foldable', VueFoldable)
 ```
 
 </details>
+<br>
 
-<foldable class="async-demo" height="%50" async>
+<foldable class="async-demo transition-demo" height="%50" async>
   <p align="center">
     <img src="https://vuejs.org/images/logo.png"/>
   </p>
@@ -147,11 +150,11 @@ By default, vue-foldable don't have any transition preset, you can customize tra
 
 ``` css
 .vue-foldable-container {
-  transition: max-height 0.3s
+  transition: max-height 0.3s;
 }
 
-.view-more-mask {
-  transition: opacity .3s;
+.vue-foldable-mask {
+  transition: opacity 3s;
 }
 ```
 

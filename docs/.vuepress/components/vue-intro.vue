@@ -9,6 +9,6 @@
 
 <style>
   .vue-intro {
-    line-height: 1.7;
+    line-height: 2;
   }
 </style>
