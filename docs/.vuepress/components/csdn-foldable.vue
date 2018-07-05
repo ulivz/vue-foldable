@@ -1,6 +1,6 @@
 <template>
   <foldable class="csdn-foldable" height="%50" async>
-
+    <!-- default slot -->
     <slot></slot>
 
     <!-- named slot -->
@@ -16,6 +16,15 @@
 
 <style lang="stylus">
   .csdn-foldable {
+    .vue-foldable-container {
+      transition: max-height 0.3s;
+    }
+
+    .vue-foldable-mask {
+      transition: opacity 3s;
+      bottom: 36px;
+    }
+
     .csdn-view-more {
       margin: 10px auto;
       width: 121px;
