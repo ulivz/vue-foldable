@@ -108,6 +108,14 @@ Vue.component('foldable', VueFoldable)
   </p>
 </foldable>
 
+## Customize view more
+
+<csdn-foldable>
+  <p align="center">
+    <img src="https://vuejs.org/images/logo.png"/>
+  </p>
+</csdn-foldable>
+
 ## Props
 
 ### height

@@ -5,14 +5,16 @@
          ref="container">
       <slot></slot>
     </div>
-    <slot name="view-more">
+    <slot name="view-more"
+          :toggle="toggle"
+          :collapsed="collapsed">
       <div class="vue-foldable-view-more"
-           :class="{ 'collapsed': this.collapsed }"
+           :class="{ 'collapsed': collapsed }"
            @click="toggle"
            v-if="reachThreshold">
         <div class="vue-foldable-mask"></div>
         <ArrowIcon class="vue-foldable-icon"
-                   :class="{ 'collapsed': this.collapsed }">
+                   :class="{ 'collapsed': collapsed }">
         </ArrowIcon>
         <span class="text">{{ collapsed ? 'View more' : 'Collapse' }}</span>
       </div>
