@@ -1,5 +1,5 @@
 <template>
-  <foldable class="csdn-foldable" height="%50" async>
+  <VueFoldable class="csdn-foldable" height="%50" async>
     <!-- default slot -->
     <slot></slot>
 
@@ -11,8 +11,16 @@
         {{ collapsed ? '查看全文' : '收起' }}
       </div>
     </template>
-  </foldable>
+  </VueFoldable>
 </template>
+
+<script>
+  import VueFoldable from 'vue-foldable'
+  export default {
+    name: 'csdn-foldable',
+    components: { VueFoldable }
+  }
+</script>
 
 <style lang="stylus">
   .csdn-foldable {
