@@ -1,0 +1,28 @@
+0 silly input []
+1 silly flags { _: [ 'bootstrap' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   args: [] }
+2 verbose rootPath /Users/haolchen/Documents/__self__/vue-foldable
+3 info version 2.11.0
+4 silly existsSync /Users/haolchen/Documents/__self__/vue-foldable/VERSION
+5 silly initialize attempt
+6 silly npmConfig { registry: undefined,
+6 silly npmConfig   npmClient: 'yarn',
+6 silly npmConfig   npmClientArgs: undefined,
+6 silly npmConfig   mutex: 'network:42424' }
+7 silly initialize success
+8 silly execute attempt
+9 info Bootstrapping 2 packages
+10 silly installInDirOriginalPackageJson /Users/haolchen/Documents/__self__/vue-foldable
+11 silly getExecOpts { cwd: '/Users/haolchen/Documents/__self__/vue-foldable' }
+12 silly installInDir [ 'yarn',
+12 silly installInDir   [ 'install', '--mutex', 'network:42424', '--non-interactive' ] ]
+13 error execute callback with error
+14 error Error: Command failed: yarn install --mutex network:42424 --non-interactive
+14 error error Workspaces can only be enabled in private projects.
+14 error yarn install v1.7.0
+14 error info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+14 error
+14 error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+14 error     at <anonymous>

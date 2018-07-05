@@ -1,0 +1,72 @@
+{
+  "name": "vue-foldable",
+  "version": "0.2.1",
+  "description": "foldable component for vue.js",
+  "repository": {
+    "url": "ULIVZ/vue-foldable",
+    "type": "git"
+  },
+  "main": "dist/vue-foldable.cjs.js",
+  "module": "dist/vue-foldable.es.js",
+  "unpkg": "dist/vue-foldable.js",
+  "jsdelivr": "dist/vue-foldable.js",
+  "sideEffects": false,
+  "bugs": {
+    "url": "https://github.com/vuejs/vue-cli/issues"
+  },
+  "homepage": "https://github.com/vuejs/vue-cli#readme",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test:cov": "jest --coverage && npm run lint",
+    "test": "npm run lint && jest",
+    "lint": "xo",
+    "prepublishOnly": "npm run build",
+    "build": "bili --plugin vue --js buble --format es,umd,cjs --module-name VueFoldable"
+  },
+  "author": "ULIVZ <chl814@foxmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "bili": "^3.1.2",
+    "eslint-config-rem": "^3.0.0",
+    "jest-cli": "^19.0.0",
+    "lerna": "^2.11.0",
+    "rollup-plugin-vue": "2",
+    "stylus": "^0.54.5",
+    "vuepress": "^0.10.2",
+    "xo": "^0.18.0"
+  },
+  "keywords": [
+    "vue",
+    "foldable",
+    "callapse",
+    "summary"
+  ],
+  "xo": {
+    "extends": "rem",
+    "envs": [
+      "jest"
+    ]
+  }
+}
