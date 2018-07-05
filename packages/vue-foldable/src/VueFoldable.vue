@@ -200,4 +200,5 @@
       &.collapsed
         .vue-foldable-icon
           transform scaleY(-1)
+
 </style>
