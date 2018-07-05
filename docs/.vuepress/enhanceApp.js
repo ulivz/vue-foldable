@@ -1,4 +1,5 @@
-import VueFoldable from '../../dist/vue-foldable.es'
+import VueFoldable from '../../packages/vue-foldable/dist/vue-foldable.es'
+import VueFoldableCsdn from '../../packages/@vue-foldable/csdn/dist/csdn.es'
 // import '../../dist/vue-foldable.css'
 
 export default ({
@@ -8,5 +9,6 @@ export default ({
   siteData // site metadata
 }) => {
   Vue.component('foldable', VueFoldable)
+  Vue.component('csdn-foldable', VueFoldableCsdn)
   // ...apply enhancements to the app
 }

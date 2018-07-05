@@ -14,11 +14,44 @@
   "files": [
     "dist"
   ],
+  "jest": {
+    "testEnvironment": "node"
+  },
   "scripts": {
+    "test:cov": "jest --coverage packages/**/*.js && npm run lint",
+    "test": "npm run lint && jest",
+    "lint": "xo packages/**/*.js",
     "build": "lerna run build",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:release": "/bin/bash docs/deploy.sh"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "bili": "^3.1.2",
+    "eslint-config-rem": "^3.0.0",
+    "jest-cli": "^19.0.0",
+    "lerna": "^2.11.0",
+    "rollup-plugin-vue": "2",
+    "stylus": "^0.54.5",
+    "vuepress": "^0.10.2",
+    "xo": "^0.18.0"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      }
+    }
   },
   "author": "ULIVZ <chl814@foxmail.com>",
   "license": "MIT"
