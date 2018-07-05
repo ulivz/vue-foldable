@@ -33,7 +33,7 @@
     ]
   },
   "scripts": {
-    "build": "bili",
+    "build": "bili --plugin vue --js buble --format es,umd,cjs --module-name VueFoldable",
     "dev": "yarn build --watch"
   }
 }

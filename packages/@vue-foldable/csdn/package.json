@@ -18,7 +18,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "bili",
+    "build": "bili --plugin vue --js buble --format es,umd,cjs --module-name VueFoldableCsdn",
     "dev": "yarn build --watch"
   },
   "author": "ULIVZ <chl814@foxmail.com>",
