@@ -1,5 +1,6 @@
 {
   "private": true,
+  "version": "1.0.0",
   "name": "vue-foldable",
   "workspaces": [
     "packages/vue-foldable",
@@ -22,17 +23,19 @@
     "test": "npm run lint && jest",
     "lint": "xo packages/**/*.js",
     "build": "lerna run build",
+    "boot": "node scripts/bootstrap.js",
+    "dev": "lerna run --parallel dev",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:release": "/bin/bash docs/deploy.sh"
   },
   "devDependencies": {
     "babel-preset-env": "^1.4.0",
+    "rollup-plugin-vue": "2",
     "bili": "^3.1.2",
     "eslint-config-rem": "^3.0.0",
     "jest-cli": "^19.0.0",
     "lerna": "^2.11.0",
-    "rollup-plugin-vue": "2",
     "stylus": "^0.54.5",
     "vuepress": "^0.10.2",
     "xo": "^0.18.0"

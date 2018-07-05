@@ -1,2 +1,1 @@
-import VueFoldable from './VueFoldable.vue'
-export default VueFoldable
+export { default } from './VueFoldable.vue'

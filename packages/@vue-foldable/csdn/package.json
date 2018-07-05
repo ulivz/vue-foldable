@@ -6,10 +6,10 @@
     "url": "ULIVZ/vue-foldable",
     "type": "git"
   },
-  "main": "dist/vue-foldable.cjs.js",
-  "module": "dist/vue-foldable.es.js",
-  "unpkg": "dist/vue-foldable.js",
-  "jsdelivr": "dist/vue-foldable.js",
+  "main": "dist/csdn.cjs.js",
+  "module": "dist/csdn.es.js",
+  "unpkg": "dist/csdn.js",
+  "jsdelivr": "dist/csdn.js",
   "bugs": {
     "url": "https://github.com/vuejs/vue-cli/issues"
   },
@@ -17,16 +17,10 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "vue-foldable": "^0.2.1"
-  },
   "scripts": {
-    "build": "bili --plugin vue --js buble --format es,umd,cjs --module-name VueFoldableCsdn",
-    "dev": "yarn build -- --watch"
+    "build": "bili",
+    "dev": "yarn build --watch"
   },
   "author": "ULIVZ <chl814@foxmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "rollup-plugin-vue": "^4.3.0"
-  }
+  "license": "MIT"
 }

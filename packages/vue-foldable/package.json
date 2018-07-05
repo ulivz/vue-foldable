@@ -33,10 +33,7 @@
     ]
   },
   "scripts": {
-    "build": "bili --plugin vue --js buble --format es,umd,cjs --module-name VueFoldable",
-    "dev": "yarn build -- --watch"
-  },
-  "devDependencies": {
-    "rollup-plugin-vue": "^4.3.0"
+    "build": "bili",
+    "dev": "yarn build --watch"
   }
 }
