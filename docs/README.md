@@ -110,6 +110,8 @@ Vue.component('foldable', VueFoldable)
 
 ## Customize view more
 
+### CSDN style
+
 <csdn-foldable>
   <p align="center">
     <img src="https://vuejs.org/images/logo.png"/>
