@@ -1,43 +1,5 @@
-/* There is a CSS extraction issue of VuePress */
-/* Temporary workaround */
-/* START a copy of import '../../packages/vue-foldable/dist/vue-foldable.css' */
-.vue-foldable {
-  position: relative;
-}
-.vue-foldable .vue-foldable-container {
-  overflow: hidden;
-}
-.vue-foldable .vue-foldable-mask {
-  position: absolute;
-  bottom: 30px /* view-more's height */;
-  height: 80px;
-  width: 100%;
-  background: transparent;
-  pointer-events: none;
-}
-.vue-foldable .vue-foldable-mask.collapsed {
-  opacity: 1;
-  background: linear-gradient(to bottom, rgba(55,55,55,0), #fff);
-}
-.vue-foldable .vue-foldable-mask:not(.collapsed) {
-  opacity: 0;
-}
-.vue-foldable .vue-foldable-view-more {
-  width: 100%;
-  text-align: center;
-  height: 30px;
-  line-height: 30px;
-  cursor: pointer;
-  color: #4dba87;
-}
-.vue-foldable .vue-foldable-view-more .vue-foldable-icon {
-  width: 18px;
-  transform: scaleY(1);
-}
-.vue-foldable .vue-foldable-view-more.collapsed .vue-foldable-icon {
-  transform: scaleY(-1);
-}
-/* END a copy of import '../../packages/vue-foldable/dist/vue-foldable.css' */
+@import '~vue-foldable/dist/vue-foldable.css'
+@import '~@vue-foldable/csdn/dist/csdn.css'
 
 .transition-demo {
   .vue-foldable-container {

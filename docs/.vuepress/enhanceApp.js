@@ -1,10 +1,5 @@
-import VueFoldable from '../../packages/vue-foldable/dist/vue-foldable.es'
-import VueFoldableCsdn from '../../packages/@vue-foldable/csdn/dist/csdn.es'
-import '../../packages/vue-foldable/dist/vue-foldable.css'
-import '../../packages/@vue-foldable/csdn/dist/csdn.css'
-
-// import VueFoldable from '../../packages/vue-foldable/src'
-// import VueFoldableCsdn from '../../packages/@vue-foldable/csdn/src'
+import VueFoldable from 'vue-foldable'
+import VueFoldableCsdn from '@vue-foldable/csdn'
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
