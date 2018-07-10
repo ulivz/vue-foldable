@@ -19,7 +19,7 @@
     "test:cov": "jest --coverage packages/**/*.js && npm run lint",
     "test": "npm run lint && jest",
     "lint": "xo packages/**/*.js",
-    "build": "lerna run build",
+    "build": "node scripts/build.js",
     "boot": "node scripts/bootstrap.js",
     "dev": "lerna run --parallel dev",
     "docs:dev": "vuepress dev docs",
@@ -31,13 +31,13 @@
     "@vue-foldable/csdn": "^0.2.1",
     "babel-preset-env": "^1.4.0",
     "rollup-plugin-vue": "2",
-    "bili": "^3.1.2",
     "eslint-config-rem": "^3.0.0",
     "jest-cli": "^19.0.0",
     "lerna": "^2.11.0",
     "stylus": "^0.54.5",
     "vuepress": "^0.11.0",
-    "xo": "^0.18.0"
+    "xo": "^0.18.0",
+    "rollup": "^0.62.0"
   },
   "babel": {
     "env": {

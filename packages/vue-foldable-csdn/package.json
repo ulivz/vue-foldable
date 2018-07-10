@@ -17,6 +17,9 @@
   "files": [
     "dist"
   ],
+  "dependencies": {
+    "vue-foldable": "^0.2.1"
+  },
   "scripts": {
     "build": "bili --plugin vue --js buble --format es,umd,cjs --module-name VueFoldableCsdn",
     "dev": "yarn build --watch"
