@@ -54,12 +54,14 @@ function getInputOptions ({
   styleFilename
 }) {
   const vue = require('rollup-plugin-vue')
+  const nodeRequire = require('rollup-plugin-node-resolve')
   return {
     input: entry,
     plugins: [
       vue({
         css: path.resolve(outDir, styleFilename)
-      })
+      }),
+      nodeRequire()
     ]
   }
 }

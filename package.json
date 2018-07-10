@@ -27,17 +27,18 @@
     "docs:release": "/bin/bash docs/deploy.sh"
   },
   "devDependencies": {
-    "vue-foldable": "^0.2.1",
     "@vue-foldable/csdn": "^0.2.1",
     "babel-preset-env": "^1.4.0",
-    "rollup-plugin-vue": "2",
     "eslint-config-rem": "^3.0.0",
     "jest-cli": "^19.0.0",
     "lerna": "^2.11.0",
+    "rollup": "^0.62.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-vue": "2",
     "stylus": "^0.54.5",
+    "vue-foldable": "^0.2.1",
     "vuepress": "^0.11.0",
-    "xo": "^0.18.0",
-    "rollup": "^0.62.0"
+    "xo": "^0.18.0"
   },
   "babel": {
     "env": {
