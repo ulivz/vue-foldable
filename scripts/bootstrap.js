@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const baseVersion = require('../packages/vue-foldable/package.json').version
 
-const packagesDir = path.resolve(__dirname, '../packages/@vue-foldable')
+const packagesDir = path.resolve(__dirname, '../packages')
 const files = fs.readdirSync(packagesDir)
 
 files.forEach(pkg => {

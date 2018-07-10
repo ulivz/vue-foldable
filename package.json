@@ -1,12 +1,9 @@
 {
   "private": true,
   "version": "1.0.0",
-  "name": "vue-foldable",
   "workspaces": [
-    "packages/vue-foldable",
-    "packages/@vue-foldable/*"
+    "packages/*"
   ],
-  "version": "0.2.1",
   "description": "foldable component for vue.js",
   "repository": {
     "url": "ULIVZ/vue-foldable",
