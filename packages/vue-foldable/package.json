@@ -3,7 +3,7 @@
   "version": "0.2.2",
   "description": "foldable component for vue.js",
   "repository": {
-    "url": "ULIVZ/vue-foldable",
+    "url": "git+https://github.com/ulivz/vue-foldable.git",
     "type": "git"
   },
   "main": "dist/vue-foldable.cjs.js",
@@ -25,15 +25,5 @@
     "foldable",
     "callapse",
     "summary"
-  ],
-  "xo": {
-    "extends": "rem",
-    "envs": [
-      "jest"
-    ]
-  },
-  "scripts": {
-    "build": "bili --plugin vue --js buble --format es,umd,cjs --module-name VueFoldable",
-    "dev": "yarn build --watch"
-  }
+  ]
 }

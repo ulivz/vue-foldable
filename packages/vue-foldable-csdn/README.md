@@ -1,3 +1,3 @@
 # @vue-foldable/csdn
 
-> csdn style of vue-foldable
+> CSDN foldable component for vue.js

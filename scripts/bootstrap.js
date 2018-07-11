@@ -10,7 +10,7 @@ const files = fs.readdirSync(packagesDir)
 files.forEach(pkg => {
   if (pkg.charAt(0) === '.') return
 
-  const desc = `${pkg} style of vue-foldable`
+  const desc = `${pkg} foldable component for vue.js`
 
   const pkgPath = path.join(packagesDir, pkg, `package.json`)
   if (!fs.existsSync(pkgPath)) {
@@ -28,10 +28,6 @@ files.forEach(pkg => {
       'repository': {
         'type': 'git',
         'url': 'git+https://github.com/ulivz/vue-foldable.git'
-      },
-      "scripts": {
-        "build": `bili --plugin vue --js buble --format es,umd,cjs --module-name VueFoldable${upperFisrtChar(pkg)}`,
-        "dev": "yarn build --watch"
       },
       'keywords': [
         'vue-foldable',
