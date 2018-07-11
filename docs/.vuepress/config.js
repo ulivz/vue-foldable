@@ -6,7 +6,7 @@ module.exports = {
   description: "foldable component for vue.js",
 
   // See: https://vuepress.vuejs.org/config/#base
-  base: "/vue-foldable/",
+  // base: "/vue-foldable/",
 
   // Extra tags to be injected to the page HTML <head>
   // See: https://vuepress.vuejs.org/config/#head
