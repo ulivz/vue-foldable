@@ -54,12 +54,24 @@ function getInputOptions ({
   styleFilename
 }) {
   const vue = require('rollup-plugin-vue')
+  const babel = require('rollup-plugin-babel')
   const nodeRequire = require('rollup-plugin-node-resolve')
   return {
     input: entry,
     plugins: [
       vue({
         css: path.resolve(outDir, styleFilename)
+      }),
+      babel({
+        presets: [
+          [
+            '@babel/preset-env', {
+            targets: {
+              browsers: ["last 2 versions", "safari >= 7"]
+            }
+          }
+          ]
+        ]
       }),
       nodeRequire()
     ]
