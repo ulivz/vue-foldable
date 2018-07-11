@@ -6,6 +6,11 @@ const packagesDir = path.resolve(__dirname, '../packages')
 const packages = fs.readdirSync(packagesDir)
 
 let target = process.argv[2]
+if (target.charAt(0) === '-') {
+  target = ''
+}
+
+const isWatch = process.argv.indexOf('--watch') !== -1
 
 /**
  * Normalize build target
@@ -31,7 +36,29 @@ async function build () {
   }))
 }
 
-build().then(() => console.log('[OK]'))
+async function watch () {
+  await Promise.all(configs.map(async ({ inputOptions, outputOptions }) => {
+    const watchOptions = Object.assign(inputOptions, {
+      output: [outputOptions]
+    })
+    const watcher = rollup.watch(watchOptions)
+    watcher.on('event', event => {
+      if (event.code === 'END') {
+        console.log(`  > Finished bundling: ${outputOptions.name}`)
+      } else if (event.code === 'ERROR') {
+        console.log(`  > Error when bundling: ${outputOptions.name}`)
+        console.log(event.error)
+      }
+    })
+    process.on('exit', () => watcher.close())
+  }))
+}
+
+if (isWatch) {
+  watch()
+} else {
+  build().then(() => console.log('[OK]'))
+}
 
 /**
  * Get rollup building configurations
