@@ -1,7 +1,10 @@
 {
   "name": "@vue-foldable/csdn",
   "version": "0.2.2",
-  "description": "foldable component for vue.js",
+  "description": "CSDN foldable component for vue.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "url": "ULIVZ/vue-foldable",
     "type": "git"
