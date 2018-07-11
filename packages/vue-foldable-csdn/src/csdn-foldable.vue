@@ -47,7 +47,7 @@
       border-radius: 4px;
       text-align: center;
       height: 34px;
-      line-height: 32px;
+      line-height: 34px;
       min-width: 72px;
       cursor: pointer;
       &:hover {
