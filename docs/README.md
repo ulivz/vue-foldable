@@ -27,6 +27,7 @@ Vue.component('foldable', VueFoldable)
 </foldable>
 ```
 
+
 ## Showcase
 
 ### Infinite mode
@@ -110,9 +111,55 @@ Vue.component('foldable', VueFoldable)
   </p>
 </foldable>
 
-## Customize view more
 
-### CSDN style
+## Custom UI
+
+`vue-foldable` provides some `slots` and gives you the ability to customize the UI. Before that, you need to know the following knowledge:
+
+- [Vue > Named Slots](https://vuejs.org/v2/guide/components-slots.html#Named-Slots)
+- [Vue > Default Slot Content](https://vuejs.org/v2/guide/components-slots.html#Default-Slot-Content)
+- [Vue > Scoped Slots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots)
+
+A simple wrapper component would be like this:
+
+<<< @/docs/.vuepress/components/my-foldable.vue
+
+<my-foldable>
+  <p align="center">
+    <img src="https://vuejs.org/images/logo.png"/>
+  </p>
+</my-foldable>
+
+
+## Components
+
+Here are some official custom components:
+
+- [@vue-foldable/csdn](https://github.com/ulivz/vue-foldable/tree/master/packages/vue-foldable-csdn)
+- [@vue-foldable/baidu](https://github.com/ulivz/vue-foldable/tree/master/packages/vue-foldable-baidu)
+
+For a complete list of components, please step to [packages](https://github.com/ulivz/vue-foldable/tree/master/packages).
+
+- Install: 
+
+``` bash
+npm install @vue-foldable/${name} -S
+```
+
+- Usage:
+
+``` js
+import comp from '@vue-foldable/${name}'
+import '@vue-foldable/${name}/dist/${name}.css'
+
+Vue.component('${name}-foldable', comp)
+```
+
+::: tip
+  Replace `${name}` with your expected target component sub name.
+:::
+
+### @vue-foldable/csdn
 
 <csdn-foldable>
   <p align="center">
@@ -120,8 +167,7 @@ Vue.component('foldable', VueFoldable)
   </p>
 </csdn-foldable>
 
-
-### Baidu Style
+### @vue-foldable/baidu
 
 <baidu-foldable>
   <p align="center">
