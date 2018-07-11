@@ -23,7 +23,8 @@
     "dev": "lerna run --parallel dev",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:release": "/bin/bash docs/deploy.sh"
+    "docs:release": "/bin/bash docs/deploy.sh",
+    "release": "lerna publish --conventional-commits --changelog-preset angular-bitbucket"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.52",
