@@ -43,6 +43,9 @@ files.forEach(({
         "summary",
         name,
       ],
+      "dependencies": {
+        "vue-foldable": "^" + baseVersion
+      },
       "author": "ULIVZ <chl814@foxmail.com>",
       "license": "MIT",
       "bugs": {
