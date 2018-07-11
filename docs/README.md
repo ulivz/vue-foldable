@@ -120,6 +120,15 @@ Vue.component('foldable', VueFoldable)
   </p>
 </csdn-foldable>
 
+
+### Baidu Style
+
+<baidu-foldable>
+  <p align="center">
+    <img src="https://vuejs.org/images/logo.png"/>
+  </p>
+</baidu-foldable>
+
 ## Props
 
 ### height
