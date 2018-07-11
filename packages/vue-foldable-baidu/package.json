@@ -1,0 +1,29 @@
+{
+  "name": "@vue-foldable/baidu",
+  "version": "0.2.2",
+  "description": "baidu foldable component for vue.js",
+  "main": "dist/baidu.cjs.js",
+  "module": "dist/baidu.es.js",
+  "unpkg": "dist/baidu.js",
+  "jsdelivr": "dist/baidu.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulivz/vue-foldable.git"
+  },
+  "keywords": [
+    "vue-foldable",
+    "foldable",
+    "callapse",
+    "summary",
+    "baidu"
+  ],
+  "author": "ULIVZ <chl814@foxmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ulivz/vue-foldable/issues"
+  },
+  "homepage": "https://github.com/ulivz/vue-foldable#readme"
+}
