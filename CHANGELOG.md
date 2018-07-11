@@ -1,3 +1,29 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="0.3.0"></a>
+## 0.3.0 (2018-07-11)
+
+* ci: fixed CI ([4a16272](https://github.com/ULIVZ/vue-foldable/commit/4a16272))
+* ci: set publishConfig to access:public ([df5d456](https://github.com/ULIVZ/vue-foldable/commit/df5d456))
+* ci: sunset release-it ([3e75199](https://github.com/ULIVZ/vue-foldable/commit/3e75199))
+* fix($csdn): vertically align middle text ([d5d2d13](https://github.com/ULIVZ/vue-foldable/commit/d5d2d13))
+* docs: add custom UI & components ([d8f38cb](https://github.com/ULIVZ/vue-foldable/commit/d8f38cb))
+* docs: fix missing transition ([c0db932](https://github.com/ULIVZ/vue-foldable/commit/c0db932))
+* docs: fix unexpected background at wechat browser ([8da0e85](https://github.com/ULIVZ/vue-foldable/commit/8da0e85))
+* docs: update ([c844bf3](https://github.com/ULIVZ/vue-foldable/commit/c844bf3))
+* docs: update core package's README ([6d70865](https://github.com/ULIVZ/vue-foldable/commit/6d70865))
+* docs: update links at README ([a06d2da](https://github.com/ULIVZ/vue-foldable/commit/a06d2da))
+* build: refine bootstrap script ([e9722a9](https://github.com/ULIVZ/vue-foldable/commit/e9722a9))
+* build: support watch ([574cd0e](https://github.com/ULIVZ/vue-foldable/commit/574cd0e))
+* build: update package.json & bootstrap script ([1ef5cb6](https://github.com/ULIVZ/vue-foldable/commit/1ef5cb6))
+* feat: baidu foldable component. ([4c30b83](https://github.com/ULIVZ/vue-foldable/commit/4c30b83))
+
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/ULIVZ/vue-foldable/compare/v0.2.0...v0.2.1) (2018-07-03)
 
@@ -39,6 +65,3 @@
 * support once option ([e358360](https://github.com/ULIVZ/vue-foldable/commit/e358360))
 * support passing percentage ([29e8af0](https://github.com/ULIVZ/vue-foldable/commit/29e8af0))
 * remove built-in transition ([dbca850](https://github.com/ULIVZ/vue-foldable/commit/dbca850))
-
-
-
