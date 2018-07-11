@@ -1,5 +1,10 @@
-import VueFoldable from 'vue-foldable'
-import 'vue-foldable/dist/vue-foldable.css'
+// Don't need import it since it has been exported by its
+// wrapper component.
+
+// import VueFoldable from 'vue-foldable'
+// import 'vue-foldable/dist/vue-foldable.css'
+
+import { VueFoldable } from '@vue-foldable/csdn'
 
 import VueFoldableCsdn from '@vue-foldable/csdn'
 import '@vue-foldable/csdn/dist/csdn.css'

@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import VueFoldable from 'vue-foldable'
+  import VueFoldable from 'vue-foldable/src'
   export default {
     name: 'csdn-foldable',
     components: { VueFoldable }
@@ -23,7 +23,7 @@
 </script>
 
 <style lang="stylus">
-  .csdn-foldable {
+  .vue-foldable.csdn-foldable /* greater priority */ {
     .vue-foldable-container {
       transition: max-height 0.3s;
     }

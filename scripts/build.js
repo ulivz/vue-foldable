@@ -89,6 +89,9 @@ function getOutputOptions ({
 }) {
   // Refer to: https://rollupjs.org/guide/en#big-list-of-options
   return {
+    // Using named and default exports together,
+    // Consumers will have to use VueFoldable['default'] to access the default export
+    exports: 'named',
     name: normalizePackageName(name),
     dir: outDir,
     file: normalizeFileName(name, 'js', format),
