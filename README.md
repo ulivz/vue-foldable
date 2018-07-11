@@ -5,10 +5,10 @@
 
 ## Features
 
-- Support explicit or percentage [height](http://www.v2js.com/vue-foldable/#height).
-- Infinite & [once](http://www.v2js.com/vue-foldable/#once-mode) expansion.
-- Optional expanding [transition](http://www.v2js.com/vue-foldable/#transition).
-- [Asynchronous content](http://www.v2js.com/vue-foldable/#asynchronous-content) watching.
+- Support explicit or percentage [height](https://vue-foldable.ulivz.com#height).
+- Infinite & [once](https://vue-foldable.ulivz.com#once-mode) expansion.
+- Optional expanding [transition](https://vue-foldable.ulivz.com#transition).
+- [Asynchronous content](https://vue-foldable.ulivz.com#asynchronous-content) watching.
 
 Check out the full [documentation](http://www.v2js.com/vue-foldable).
 
