@@ -27,10 +27,12 @@
     "docs:release": "/bin/bash docs/deploy.sh"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.52",
+    "@babel/preset-env": "^7.0.0-beta.52",
+    "rollup-plugin-babel": "^4.0.0-beta.7",
     "@vue-foldable/csdn": "^0.2.1",
     "babel-preset-env": "^1.4.0",
     "eslint-config-rem": "^3.0.0",
-    "jest-cli": "^19.0.0",
     "lerna": "^2.11.0",
     "rollup": "^0.62.0",
     "rollup-plugin-node-resolve": "^3.3.0",

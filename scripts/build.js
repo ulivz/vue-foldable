@@ -63,9 +63,12 @@ function getInputOptions ({
         css: path.resolve(outDir, styleFilename)
       }),
       babel({
+        babelrc: false,
         presets: [
           [
             '@babel/preset-env', {
+            // https://github.com/rollup/rollup-plugin-babel#modules
+            modules: false,
             targets: {
               browsers: ["last 2 versions", "safari >= 7"]
             }
