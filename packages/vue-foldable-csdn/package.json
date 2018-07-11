@@ -1,6 +1,6 @@
 {
   "name": "@vue-foldable/csdn",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "foldable component for vue.js",
   "repository": {
     "url": "ULIVZ/vue-foldable",
@@ -18,7 +18,7 @@
     "dist"
   ],
   "dependencies": {
-    "vue-foldable": "^0.2.1"
+    "vue-foldable": "^0.2.2"
   },
   "scripts": {
     "build": "bili --plugin vue --js buble --format es,umd,cjs --module-name VueFoldableCsdn",
