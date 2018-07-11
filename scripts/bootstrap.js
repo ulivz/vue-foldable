@@ -5,23 +5,30 @@ const path = require('path')
 const baseVersion = require('../packages/vue-foldable/package.json').version
 
 const packagesDir = path.resolve(__dirname, '../packages')
-const files = fs.readdirSync(packagesDir)
+const files = fs.readdirSync(packagesDir).map(dirname => ({
+  dirname,
+  name: dirname.replace('vue-foldable-', ''),
+  pkgJsonPath: path.join(packagesDir, dirname, `package.json`)
+}))
 
-files.forEach(pkg => {
-  if (pkg.charAt(0) === '.') return
+files.forEach(({
+  pkgJsonPath,
+  dirname,
+  name
+}) => {
+  if (dirname.charAt(0) === '.') return
 
-  const desc = `${pkg} foldable component for vue.js`
+  const desc = `${name} foldable component for vue.js`
 
-  const pkgPath = path.join(packagesDir, pkg, `package.json`)
-  if (!fs.existsSync(pkgPath)) {
+  if (!fs.existsSync(pkgJsonPath)) {
     const json = {
-      'name': `@vue-foldable/${pkg}`,
+      'name': `@vue-foldable/${name}`,
       'version': baseVersion,
       'description': desc,
-      "main": `dist/${pkg}.cjs.js`,
-      "module": `dist/${pkg}.es.js`,
-      "unpkg": `dist/${pkg}.js`,
-      "jsdelivr": `dist/${pkg}.js`,
+      "main": `dist/${name}.cjs.js`,
+      "module": `dist/${name}.es.js`,
+      "unpkg": `dist/${name}.js`,
+      "jsdelivr": `dist/${name}.js`,
       'publishConfig': {
         'access': 'public'
       },
@@ -34,7 +41,7 @@ files.forEach(pkg => {
         "foldable",
         "callapse",
         "summary",
-        pkg,
+        name,
       ],
       "author": "ULIVZ <chl814@foxmail.com>",
       "license": "MIT",
@@ -43,15 +50,15 @@ files.forEach(pkg => {
       },
       "homepage": "https://github.com/ulivz/vue-foldable#readme",
     }
-    fs.writeFileSync(pkgPath, JSON.stringify(json, null, 2))
+    fs.writeFileSync(pkgJsonPath, JSON.stringify(json, null, 2))
   }
 
-  const readmePath = path.join(packagesDir, pkg, `README.md`)
+  const readmePath = path.join(packagesDir, dirname, `README.md`)
   if (!fs.existsSync(readmePath)) {
-    fs.writeFileSync(readmePath, `# @vue-foldable/${pkg}\n\n> ${desc}`)
+    fs.writeFileSync(readmePath, `# @vue-foldable/${name}\n\n> ${desc}`)
   }
 
-  const npmIgnorePath = path.join(packagesDir, pkg, `.npmignore`)
+  const npmIgnorePath = path.join(packagesDir, dirname, `.npmignore`)
   if (!fs.existsSync(npmIgnorePath)) {
     fs.writeFileSync(npmIgnorePath, `dist\n__tests__/\n__mocks__/`)
   }
