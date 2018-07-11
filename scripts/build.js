@@ -6,7 +6,7 @@ const packagesDir = path.resolve(__dirname, '../packages')
 const packages = fs.readdirSync(packagesDir)
 
 let target = process.argv[2]
-if (target.charAt(0) === '-') {
+if (target && target.charAt(0) === '-') {
   target = ''
 }
 
