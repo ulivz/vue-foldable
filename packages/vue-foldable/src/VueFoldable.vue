@@ -16,23 +16,23 @@
            :class="{ 'collapsed': collapsed }"
            @click="toggle"
            v-if="reachThreshold">
-        <ArrowIcon class="vue-foldable-icon"
+        <VueIcon class="vue-foldable-icon"
                    :class="{ 'collapsed': collapsed }">
-        </ArrowIcon>
-        <span class="text">{{ collapsed ? 'View more' : 'Collapse' }}</span>
+        </VueIcon>
+        <span class="vue-foldable-text">{{ collapsed ? 'View more' : 'Collapse' }}</span>
       </div>
     </slot>
   </div>
 </template>
 
 <script>
-  import ArrowIcon from './ArrowIcon.vue'
+  import VueIcon from './VueIcon.vue'
   const DEFAULT_VISUAL_HEIGHT = 100;
 
   export default {
     name: 'vue-foldable',
 
-    components: { ArrowIcon },
+    components: { VueIcon },
 
     props: {
       minHeight: {
@@ -195,10 +195,14 @@
       cursor pointer
       color #4dba87
       .vue-foldable-icon
-        width 18px
-        transform scaleY(1)
+        width 22px
+        transform rotate(180deg)
+        transition transform 0.3s
+        vertical-align middle
+      .vue-foldable-text
+        vertical-align middle
       &.collapsed
         .vue-foldable-icon
-          transform scaleY(-1)
+          transform rotate(0deg)
 
 </style>
