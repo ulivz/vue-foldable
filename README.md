@@ -5,7 +5,8 @@
 
 ## Features
 
-- Support explicit or percentage [height](https://vue-foldable.ulivz.com#height).
+- [Customize UI](https://vue-foldable.ulivz.com/#custom-ui) based on [slots](https://vuejs.org/v2/guide/components-slots.html).
+- Support explicit or percentage content [height](https://vue-foldable.ulivz.com#height).
 - Infinite & [once](https://vue-foldable.ulivz.com#once-mode) expansion.
 - Optional expanding [transition](https://vue-foldable.ulivz.com#transition).
 - [Asynchronous content](https://vue-foldable.ulivz.com#asynchronous-content) watching.
