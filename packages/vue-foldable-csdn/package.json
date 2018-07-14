@@ -1,6 +1,6 @@
 {
   "name": "@vue-foldable/csdn",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "csdn foldable component for vue.js",
   "publishConfig": {
     "access": "public"
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/ulivz/vue-foldable#readme",
   "dependencies": {
-    "vue-foldable": "^0.4.0"
+    "vue-foldable": "^0.4.1"
   },
   "keywords": [
     "vue-foldable",
