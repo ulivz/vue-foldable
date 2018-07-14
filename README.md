@@ -3,6 +3,8 @@
 [![NPM version](https://img.shields.io/npm/v/vue-foldable.svg?style=flat)](https://npmjs.com/package/vue-foldable) [![NPM downloads](https://img.shields.io/npm/dm/vue-foldable.svg?style=flat)](https://npmjs.com/package/vue-foldable) 
  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/ULIVZ/donate)
 
+![demo](docs/.vuepress/public/demo.gif)
+
 ## Features
 
 - [Customize UI](https://vue-foldable.ulivz.com/#custom-ui) based on [slots](https://vuejs.org/v2/guide/components-slots.html).
