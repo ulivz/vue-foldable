@@ -41,7 +41,8 @@
     "xo": "^0.18.0",
     "vue-foldable": "^0.4.0",
     "@vue-foldable/csdn": "^0.4.0",
-    "@vue-foldable/baidu": "^0.4.0"
+    "@vue-foldable/baidu": "^0.4.0",
+    "@vue-foldable/weibo": "^0.4.0"
   },
   "babel": {
     "env": {

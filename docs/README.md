@@ -135,6 +135,7 @@ A simple wrapper component would be like this:
 
 Here are some official custom components:
 
+- [@vue-foldable/weibo](https://github.com/ulivz/vue-foldable/tree/master/packages/vue-foldable-weibo)
 - [@vue-foldable/csdn](https://github.com/ulivz/vue-foldable/tree/master/packages/vue-foldable-csdn)
 - [@vue-foldable/baidu](https://github.com/ulivz/vue-foldable/tree/master/packages/vue-foldable-baidu)
 
@@ -158,6 +159,14 @@ Vue.component('${name}-foldable', comp)
 ::: tip
   Replace `${name}` with your expected target component sub name.
 :::
+
+### @vue-foldable/weibo
+
+<weibo-foldable>
+  <p align="center">
+    <img src="https://vuejs.org/images/logo.png"/>
+  </p>
+</weibo-foldable>
 
 ### @vue-foldable/csdn
 
