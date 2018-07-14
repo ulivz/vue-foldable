@@ -1,0 +1,32 @@
+{
+  "name": "@vue-foldable/weibo",
+  "version": "0.4.0",
+  "description": "weibo foldable component for vue.js",
+  "main": "dist/weibo.cjs.js",
+  "module": "dist/weibo.es.js",
+  "unpkg": "dist/weibo.js",
+  "jsdelivr": "dist/weibo.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulivz/vue-foldable.git"
+  },
+  "keywords": [
+    "vue-foldable",
+    "foldable",
+    "callapse",
+    "summary",
+    "weibo"
+  ],
+  "dependencies": {
+    "vue-foldable": "^0.4.0"
+  },
+  "author": "ULIVZ <chl814@foxmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ulivz/vue-foldable/issues"
+  },
+  "homepage": "https://github.com/ulivz/vue-foldable#readme"
+}
