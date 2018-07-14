@@ -17,14 +17,11 @@
     "url": "https://github.com/ulivz/vue-foldable/issues"
   },
   "homepage": "https://github.com/ulivz/vue-foldable#readme",
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "vue-foldable": "^0.4.0"
   },
   "keywords": [
-    "vue",
+    "vue-foldable",
     "foldable",
     "callapse",
     "summary",

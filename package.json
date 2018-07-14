@@ -30,7 +30,6 @@
     "@babel/core": "^7.0.0-beta.52",
     "@babel/preset-env": "^7.0.0-beta.52",
     "rollup-plugin-babel": "^4.0.0-beta.7",
-    "@vue-foldable/csdn": "^0.2.1",
     "babel-preset-env": "^1.4.0",
     "eslint-config-rem": "^3.0.0",
     "lerna": "^2.11.0",
@@ -38,9 +37,11 @@
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-vue": "2",
     "stylus": "^0.54.5",
-    "vue-foldable": "^0.2.1",
     "vuepress": "^0.11.0",
-    "xo": "^0.18.0"
+    "xo": "^0.18.0",
+    "vue-foldable": "^0.4.0",
+    "@vue-foldable/csdn": "^0.4.0",
+    "@vue-foldable/baidu": "^0.4.0"
   },
   "babel": {
     "env": {

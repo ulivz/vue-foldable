@@ -1209,12 +1209,6 @@
   version "10.5.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.1.tgz#d578446f4abff5c0b49ade9b4e5274f6badaadfc"
 
-"@vue-foldable/csdn@^0.2.1":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@vue-foldable/csdn/-/csdn-0.2.2.tgz#abee00cd4ef9eeb6af3e6c1964ac7051aa6c75fe"
-  dependencies:
-    vue-foldable "^0.2.2"
-
 "@vue/babel-preset-app@3.0.0-beta.11":
   version "3.0.0-beta.11"
   resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.0.0-beta.11.tgz#c8b889aa73464050f9cd3f9dc621951d85c24508"
@@ -9196,10 +9190,6 @@ vm-browserify@0.0.4:
 void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
-
-vue-foldable@^0.2.1, vue-foldable@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/vue-foldable/-/vue-foldable-0.2.2.tgz#46f514cab5d683b75428703d8b8fb67f300f8a93"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.0"
