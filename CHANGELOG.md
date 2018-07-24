@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.4.2"></a>
+## <small>0.4.2 (2018-07-24)</small>
+
+* fix: unepxected npm excluded dist dir. ([b11bb0d](https://github.com/ULIVZ/vue-foldable/commit/b11bb0d))
+* docs: add demo ([c1ebb29](https://github.com/ULIVZ/vue-foldable/commit/c1ebb29))
+* docs: tweaks ([3bba26a](https://github.com/ULIVZ/vue-foldable/commit/3bba26a))
+* docs: update readme ([b9586a9](https://github.com/ULIVZ/vue-foldable/commit/b9586a9))
+
+
+
+
 <a name="0.4.0"></a>
 ## 0.4.0 (2018-07-13)
 
