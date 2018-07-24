@@ -16,7 +16,7 @@ npm install vue-foldable -S
 
 ``` js
 import VueFoldable from 'vue-foldable'
-import 'vue-foldable/dist/vue-foldable.css'
+import 'vue-foldable/dist2/vue-foldable.css'
 
 Vue.component('foldable', VueFoldable)
 ```
