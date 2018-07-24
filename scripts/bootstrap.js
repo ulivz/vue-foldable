@@ -12,10 +12,10 @@ const files = fs.readdirSync(packagesDir).map(dirname => ({
 }))
 
 files.forEach(({
-  pkgJsonPath,
-  dirname,
-  name
-}) => {
+                 pkgJsonPath,
+                 dirname,
+                 name
+               }) => {
   if (dirname.charAt(0) === '.') return
 
   const desc = `${name} foldable component for vue.js`
@@ -63,7 +63,7 @@ files.forEach(({
 
   const npmIgnorePath = path.join(packagesDir, dirname, `.npmignore`)
   if (!fs.existsSync(npmIgnorePath)) {
-    fs.writeFileSync(npmIgnorePath, `dist\n__tests__/\n__mocks__/`)
+    fs.writeFileSync(npmIgnorePath, `__tests__/\n__mocks__/`)
   }
 })
 
