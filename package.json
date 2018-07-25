@@ -39,10 +39,10 @@
     "stylus": "^0.54.5",
     "vuepress": "^0.11.0",
     "xo": "^0.18.0",
-    "vue-foldable": "^0.4.0",
-    "@vue-foldable/csdn": "^0.4.0",
-    "@vue-foldable/baidu": "^0.4.0",
-    "@vue-foldable/weibo": "^0.4.0"
+    "vue-foldable": "^0.4.2",
+    "@vue-foldable/csdn": "^0.4.2",
+    "@vue-foldable/baidu": "^0.4.2",
+    "@vue-foldable/weibo": "^0.4.2"
   },
   "babel": {
     "env": {
