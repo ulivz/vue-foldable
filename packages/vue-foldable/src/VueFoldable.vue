@@ -1,25 +1,37 @@
 <template>
   <div class="vue-foldable">
-    <div class="vue-foldable-container"
-         :style="{ maxHeight: currentMaxHeight + 'px' }"
-         ref="container">
-      <slot></slot>
+    <div
+      class="vue-foldable-container"
+      :style="{ maxHeight: currentMaxHeight + 'px' }"
+      ref="container"
+    >
+      <slot/>
     </div>
 
-    <div :class="{ 'collapsed': collapsed }"
-         class="vue-foldable-mask"></div>
+    <div
+      :class="{ 'collapsed': collapsed }"
+      class="vue-foldable-mask"
+    ></div>
 
-    <slot name="view-more"
-          :toggle="toggle"
-          :collapsed="collapsed">
-      <div class="vue-foldable-view-more"
-           :class="{ 'collapsed': collapsed }"
-           @click="toggle"
-           v-if="reachThreshold">
-        <VueIcon class="vue-foldable-icon"
-                   :class="{ 'collapsed': collapsed }">
-        </VueIcon>
-        <span class="vue-foldable-text">{{ collapsed ? 'View more' : 'Collapse' }}</span>
+    <slot
+      name="view-more"
+      :toggle="toggle"
+      :collapsed="collapsed"
+    >
+      <div
+        class="vue-foldable-view-more"
+        :class="{ 'collapsed': collapsed }"
+        @click="toggle"
+        v-if="reachThreshold"
+      >
+        <VueIcon
+          class="vue-foldable-icon"
+          :class="{ 'collapsed': collapsed }"
+        />
+
+        <span class="vue-foldable-text">
+          {{ collapsed ? 'View more' : 'Collapse' }}
+        </span>
       </div>
     </slot>
   </div>
@@ -27,6 +39,7 @@
 
 <script>
   import VueIcon from './VueIcon.vue'
+
   const DEFAULT_VISUAL_HEIGHT = 100;
 
   export default {
@@ -39,18 +52,22 @@
         type: Number,
         default: DEFAULT_VISUAL_HEIGHT,
       },
+
       height: {
         type: [Number, String],
         default: DEFAULT_VISUAL_HEIGHT,
       },
+
       once: {
         type: Boolean,
         default: false
       },
+
       async: {
         type: Boolean,
         default: false
       },
+
       timeout: {
         type: Number,
         default: 3000
@@ -101,7 +118,7 @@
     },
 
     methods: {
-      handleMount() {
+      handleMount () {
         const contentHeight = this.$refs.container.scrollHeight
         this.calculateThreshold(contentHeight)
         this.checkReachThresfold(contentHeight)
@@ -111,7 +128,7 @@
         this.reachThreshold = contentHeight > this.threshold
       },
 
-      calculateThreshold(contentHeight) {
+      calculateThreshold (contentHeight) {
         if (this.percentageMode) {
           let calculatedHeight = contentHeight * this.percentage
           if (calculatedHeight < this.minHeight) {
