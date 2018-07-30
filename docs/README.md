@@ -234,6 +234,18 @@ By default, vue-foldable don't have any transition preset, you can customize tra
 }
 ```
 
+## noMask
+
+- Type: `boolean`
+- Default: `false`
+
+whether to display the transparency gradient mask, defaults to.
+
+<foldable no-mask>
+  <vue-intro/>
+</foldable>
+
+
 ## License
 
 MIT &copy; ULIVZ
