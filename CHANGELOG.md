@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.5.0"></a>
+## 0.5.0 (2018-07-30)
+
+* docs: enable SW-update Popup ([b06c4d9](https://github.com/ULIVZ/vue-foldable/commit/b06c4d9))
+* docs: no-mask option. ([ddd9d4d](https://github.com/ULIVZ/vue-foldable/commit/ddd9d4d))
+* feat: no-mask option. ([32d11d6](https://github.com/ULIVZ/vue-foldable/commit/32d11d6))
+* refactor: code style ([7c09262](https://github.com/ULIVZ/vue-foldable/commit/7c09262))
+* chore: bump vuepress ([0954646](https://github.com/ULIVZ/vue-foldable/commit/0954646))
+* chore: fix build warning ([c6b13ec](https://github.com/ULIVZ/vue-foldable/commit/c6b13ec))
+* chore: update docs' deps ([710f058](https://github.com/ULIVZ/vue-foldable/commit/710f058))
+
+
+
+
 <a name="0.4.2"></a>
 ## <small>0.4.2 (2018-07-24)</small>
 
