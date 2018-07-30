@@ -11,6 +11,7 @@
     <div
       :class="{ 'collapsed': collapsed }"
       class="vue-foldable-mask"
+      v-if="!noMask"
     ></div>
 
     <slot
@@ -71,6 +72,11 @@
       timeout: {
         type: Number,
         default: 3000
+      },
+
+      noMask: {
+        type: Boolean,
+        default: false
       }
     },
 
