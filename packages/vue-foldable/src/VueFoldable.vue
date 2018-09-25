@@ -96,11 +96,10 @@
     },
 
     created () {
-      if (typeof this.height === 'string' && !this.percentageMode) {
-        this.currentMaxHeight = this.threshold = DEFAULT_VISUAL_HEIGHT
-      }
       if (this.percentageMode) {
         this.percentage = parseInt(this.threshold.replace('%', '').trim()) / 100
+      } else if (typeof this.height === 'string') {
+        this.currentMaxHeight = this.threshold = DEFAULT_VISUAL_HEIGHT
       }
     },
 
