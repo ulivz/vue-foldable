@@ -1,6 +1,6 @@
 {
   "name": "@vue-foldable/baidu",
-  "version": "0.5.0",
+  "version": "1.0.0-alpha.0",
   "description": "baidu foldable component for vue.js",
   "main": "dist/baidu.cjs.js",
   "module": "dist/baidu.es.js",
@@ -21,7 +21,7 @@
     "baidu"
   ],
   "dependencies": {
-    "vue-foldable": "^0.5.0"
+    "vue-foldable": "^1.0.0-alpha.0"
   },
   "author": "ULIVZ <chl814@foxmail.com>",
   "license": "MIT",
