@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0"></a>
+## 1.0.0 (2019-03-16)
+
+* ci: fix release script that missing build before release ([679d982](https://github.com/ULIVZ/vue-foldable/commit/679d982))
+
+
+
+
 <a name="0.5.0"></a>
 ## 0.5.0 (2018-07-30)
 
