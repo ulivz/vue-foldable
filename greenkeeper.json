@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/vue-foldable-baidu/package.json",
+        "packages/vue-foldable-csdn/package.json",
+        "packages/vue-foldable-weibo/package.json",
+        "packages/vue-foldable/package.json"
+      ]
+    }
+  }
+}
