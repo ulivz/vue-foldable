@@ -10,6 +10,8 @@
 
 ## Features
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ulivz/vue-foldable.svg)](https://greenkeeper.io/)
+
 - [Customize UI](https://vue-foldable.ulivz.com/#custom-ui) based on [slots](https://vuejs.org/v2/guide/components-slots.html).
 - Support explicit or percentage content [height](https://vue-foldable.ulivz.com#height).
 - Infinite & [once](https://vue-foldable.ulivz.com#once-mode) expansion.
