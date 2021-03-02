@@ -205,7 +205,7 @@
       pointer-events none
       &.collapsed
         opacity 1
-        background linear-gradient(to bottom, rgba(55, 55, 55, 0), white)
+        background linear-gradient(to bottom, rgba(255, 255, 255, 0), white)
       &:not(.collapsed)
         opacity 0
 
